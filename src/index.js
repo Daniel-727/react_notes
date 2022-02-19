@@ -8,7 +8,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root') //when we first create a react app, this is the code. There is a index.html file in public that has a div with an id of 'root'. So it seems like app.js is contained in this index.js which is then shown in the index.html file specifically in the div with an id of 'root'. But doesn't document.getElemendById bring the root into this index.js file? How does index.js actually connect index.html and app.js?
 );
 
 // If you want to start measuring performance in your app, pass a function
