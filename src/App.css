@@ -1,3 +1,11 @@
+h1 {
+    background-color: #FE4A49;
+    color: white;
+}
+
+/* #FED766 color to use for notes, I guess whenever I create a new note it should be a reactstrap card */
+
+
 .App {
   text-align: center;
 }
