@@ -7,15 +7,16 @@ import {faPlus} from '@fortawesome/free-solid-svg-icons'; //importing the plus i
 class Header extends Component { 
     render() {
         return(
-            <div className='header row align-items-center m-0'> {/* align-items-center class will vertically center all items in this row, for some reason the header had 15px margin on both sides leaving whitespace, so I added m-0 to get rid of the margins*/}
-                <div className='col-sm-4'>  
-                    <Button><FontAwesomeIcon icon={faPlus}/> Add Note</Button> {/*putting in the FontAwesomeIcon component and the plus icon that I want to use */}
+            <div className='header row align-items-center  m-0'> {/* align-items-center class will vertically center all items in this row, for some reason the header had 15px margin on both sides leaving whitespace, so I added m-0 to get rid of the margins*/}
+                <div className='col-sm-4 text-center'>  
+                    <Button onClick={() => this.props.createNewNote()}><FontAwesomeIcon icon={faPlus}/> Add Note</Button> {/*putting in the FontAwesomeIcon component and the plus icon that I want to use. Passing in the createNewNote() function as a prop from App Component */}
                 </div>
-                <div className='col-sm-4'>
+                <div className='col-sm-4 text-center'> {/*text-center class centers items inside a div*/}
                     <h1 className='p-4'>
                         React Notes
                     </h1> {/* isn't this p-4 class from reactstrap? I haven't imported it so why is it working? -- I forgot, this doesn't need to be imported. They are classes in bootstrap that I just add to these html elements and they will be styled accordingly*/}
                 </div>
+                
                 
             </div>
         )
