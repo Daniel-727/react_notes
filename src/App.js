@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Header from './components/HeaderComponent';
 import Wall from './components/WallComponent';
+import Footer from './components/FooterComponent';
+import Note from './components/NoteComponent';
 import './App.css';
 
 class App extends Component{
@@ -27,7 +29,9 @@ class App extends Component{
         return (
             <>
               <Header addNote={() => this.addNote()}/> {/*passing in the createNewNote function to the Header so when the button in the header is clicked, the function here in the App Component is triggered*/}
-              <Wall numOfNotes={this.state.numOfNotes}/> {/* passing in the numOfNotes property to Wall so Wall can update how many notes there are*/}
+              <Note/>
+              <Wall numOfNotes={this.state.numOfNotes}/> {/* passing in the numOfNotes property to Wall so Wall can update how many notes there are*/} 
+              <Footer/> 
             </>
           );
     }

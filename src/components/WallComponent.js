@@ -24,10 +24,10 @@ class Wall extends Component{ //I think I'll have the Wall Component store the s
     }
 }
 
-
+/* 
 if(this.props.numOfNotes){
     
-}
+} */
 
 
 export default Wall;
