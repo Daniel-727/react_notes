@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Header from './components/HeaderComponent';
-import Wall from './components/WallComponent';
 import Footer from './components/FooterComponent';
 import Note from './components/NoteComponent';
 import './App.css';
@@ -9,7 +8,8 @@ class App extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            numOfNotes: 0
+            numOfNotes: 0,
+            notesArray: []
         } //default notes start at 0, and whenever user clicks on header button to add note, this number will increase
 
         
@@ -17,7 +17,8 @@ class App extends Component{
 
     addNote() { //function for what happens when button is clicked, it seems you create methods outside of the constructor, and they also don't need the function keyword. You just need the name of the function.
         this.setState({numOfNotes: this.state.numOfNotes + 1}); {/*everytime the add note button is clicked, we change numOfNotes property in app to increment by 1*/}
-        //console.log(this.state.numOfNotes);
+        this.setState({notesArray: this.state.notesArray.push(this.state.numOfNotes)}); {/*trying something, we are pushing the number of notes into an array so eventually we can map it to create multiple notes*/}
+        console.log(this.state.notesArray);
     }
 
     /* deleteNotes() {
@@ -30,11 +31,19 @@ class App extends Component{
             <>
               <Header addNote={() => this.addNote()}/> {/*passing in the createNewNote function to the Header so when the button in the header is clicked, the function here in the App Component is triggered*/}
               <Note/>
-              <Wall numOfNotes={this.state.numOfNotes}/> {/* passing in the numOfNotes property to Wall so Wall can update how many notes there are*/} 
+              
+               
               <Footer/> 
             </>
           );
     }
 }
+
+/* function ReturnArrayOfNotes() { //trying to return multiple note components depending on the number of notes stores in the state but obviously I'm doing something wrong
+    const arrayNotes = this.state.notesArray.map(number => { //for every number in the array, return a note
+        return <Note/>
+    });
+} */
+
 
 export default App;
