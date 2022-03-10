@@ -3,6 +3,7 @@ import Header from './components/HeaderComponent';
 import Footer from './components/FooterComponent';
 import Note from './components/NoteComponent';
 import './App.css';
+import notes from './notes'; //importing notes to use notes array for Keeper App part 2
 
 class App extends Component{
     constructor(props) {
@@ -36,7 +37,7 @@ class App extends Component{
         return (
             <>
               <Header addNote={() => this.addNote()}/> {/*passing in the createNewNote function to the Header so when the button in the header is clicked, the function here in the App Component is triggered*/}
-              {this.state.notesArray.map(createNotes)} {}
+              {notes.map(createNotes)} {/*not sure why we don't need parentheses after createNotes*/}
               
                
               <Footer/> 
@@ -48,7 +49,9 @@ class App extends Component{
 
 function createNotes() { //apparently we can't read the state from out here. so adding a key isn't working, but creating multiple notes works.
     return <Note
-        /* key={this.state.numOfNotes} */
+        key={note.key}
+        title={note.title}
+        content={note.content}
         />;
 }
 
