@@ -37,7 +37,7 @@ class App extends Component{
         return (
             <>
               <Header addNote={() => this.addNote()}/> {/*passing in the createNewNote function to the Header so when the button in the header is clicked, the function here in the App Component is triggered*/}
-              {notes.map(createNotes)} {/*not sure why we don't need parentheses after createNotes. Also for Keeper app part 2, we aren't passing anything into the createNotes function so how is it that in the code below, there is a note parameter that's able to be used*/}
+              {notes.map(note => createNotes(note))} {/*not sure why we don't need parentheses after createNotes. Also for Keeper app part 2, we aren't passing anything into the createNotes function so how is it that in the code below, there is a note parameter that's able to be used*/}
               
                
               <Footer/> 
