@@ -37,7 +37,7 @@ class App extends Component{
         return (
             <>
               <Header addNote={() => this.addNote()}/> {/*passing in the createNewNote function to the Header so when the button in the header is clicked, the function here in the App Component is triggered*/}
-              {notes.map(createNotes)} {/*not sure why we don't need parentheses after createNotes*/}
+              {notes.map(createNotes)} {/*not sure why we don't need parentheses after createNotes. Also for Keeper app part 2, we aren't passing anything into the createNotes function so how is it that in the code below, there is a note parameter that's able to be used*/}
               
                
               <Footer/> 
@@ -47,7 +47,7 @@ class App extends Component{
 }
 
 
-function createNotes() { //apparently we can't read the state from out here. so adding a key isn't working, but creating multiple notes works.
+function createNotes(note) { //apparently we can't read the state from out here. so adding a key isn't working, but creating multiple notes works. KEEPER APP PART 2, so apparently passing in arguments is optional in javascript, even if the function requires inputs, if you call a function without inputting arguments, the only thing that will happen is that the parameter will be undefined inside the function.
     return <Note
         key={note.key}
         title={note.title}
