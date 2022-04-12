@@ -20,6 +20,7 @@
     padding: 10px;
     margin: 16px;
     float: left;
+    position:relative;
 }
 .note h1 {
     font-size: 1.1em;
@@ -33,7 +34,13 @@
 }
 
 span{
-    max-width: 13vw;
+    max-width: 10vw;
+}
+
+.xMark {
+    position:absolute;
+    top:0px;
+    right:2px;
 }
 
 
