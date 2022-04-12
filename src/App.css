@@ -15,8 +15,9 @@
     background: #FED766;
     border-radius: 7px;
     box-shadow: 0 2px 5px #ccc;
+    display:flex;
+    max-width: 14vw;
     padding: 10px;
-    width: 240px;
     margin: 16px;
     float: left;
 }
@@ -31,10 +32,12 @@
     word-wrap: break-word;
 }
 
-textarea{
-    background-color: #FED766;
-    border: none;
+span{
+    max-width: 13vw;
 }
+
+
+
 
 
 /* #FED766 color to use for notes, I guess whenever I create a new note it should be a reactstrap card */

@@ -14,6 +14,21 @@ function App() {
         <>
             <Header/>
             <Note title="hi" content="hello"/>
+            <Note title="hi" content="hello"/>
+            <Note title="hi" content="hello"/>
+            <Note title="hi" content="hello"/>
+            <Note title="hi" content="hello"/>
+            <Note title="hi" content="hello"/>
+            <Note title="hi" content="hello"/>
+            <Note title="hi" content="hello"/>
+            <Note title="hi" content="hello"/>
+            <Note title="hi" content="hello"/>
+            <Note title="hi" content="hello"/>
+            <Note title="hi" content="hello"/>
+            <Note title="hi" content="hello"/>
+            <Note title="hi" content="hello"/>
+            <Note title="hi" content="hello"/>
+            <Note title="hi" content="hello"/>
             
             <Footer/> 
         </>
