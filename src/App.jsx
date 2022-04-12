@@ -15,8 +15,13 @@ function App() {
         setNotes([...notes, numOfNotes]);
     }
 
-    function deleteNote() {
-        console.log('hi');
+    function deleteNote(id) { //this should return all the Notes where the index is not equal to id, but it's just deleting the last Note
+        console.log(id);
+        setNotes(notes => {
+            return notes.filter((e,i) => {
+                return i !== id;
+            });
+        });
     }
     
     return (
