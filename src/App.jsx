@@ -15,10 +15,10 @@ function App() {
         setNotes([...notes, numOfNotes]);
     }
 
-    function deleteNote(id) { //this should return all the Notes where the index is not equal to id, but it's just deleting the last Note
-        console.log(id);
+    function deleteNote(event,id) { //this should return all the Notes where the index is not equal to id, but it's just deleting the last Note. Maybe because I didn't have the event
+        console.log(event.timeStamp);
         setNotes(notes => {
-            return notes.filter((e,i) => {
+            return notes.filter((e,i) => { //this will return an array of notes where the note that is clicked
                 return i !== id;
             });
         });

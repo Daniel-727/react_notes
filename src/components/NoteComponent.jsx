@@ -13,12 +13,16 @@ function Note(props){
     function hideX(){
         setHover(false);
     }
+
+    function handleClick(){
+
+    }
     
     return( 
         <div className='col'>
             <div className='note' onMouseOver={revealX} onMouseLeave={hideX}> {/*when user is hovering mouse over the Note, then we want the x to be visible so the user can click on it and delete the note if they want. Otherwise, the x should be hidden*/}
                 <span contentEditable='true'></span>
-                {hover ? <div onClick={() => props.clickX(props.id)} className='xMark'><FontAwesomeIcon icon={faXmark} /></div> : <div></div>}
+                {hover ? <div onClick={handleClick} className='xMark'><FontAwesomeIcon icon={faXmark} /></div> : <div></div>}
             </div>
         </div> 
     );
