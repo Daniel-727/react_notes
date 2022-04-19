@@ -1,3 +1,8 @@
+* {
+    padding:0;
+    margin:0;
+}
+
 .header {
     background-color: #FE4A49;
     color: white;
@@ -11,36 +16,25 @@
     height: 2.5rem;
 }
 
+.row{
+    width:100%;
+}
+
 .note {
     background: #FED766;
     border-radius: 7px;
     box-shadow: 0 2px 5px #ccc;
-    display:flex;
-    max-width: 14vw;
     padding: 10px;
+    width: 240px;
     margin: 16px;
     float: left;
-    position:relative;
-}
-.note h1 {
-    font-size: 1.1em;
-    margin-bottom: 6px;
-}
-.note p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
+    }
 
-span{
-    max-width: 10vw;
-}
-
-.xMark {
-    position:absolute;
-    top:0px;
-    right:2px;
+input{
+    border:none;
+    width:100%;
+    height:auto;
+    background-color: #FED766;
 }
 
 
