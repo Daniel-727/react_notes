@@ -20,9 +20,24 @@ function Note(props){
     }
 
     function handleChange(e){
-        console.log('hi');
-        props.userInput({text: e.target.value}
-        );
+        const {value, name} = e.target;
+        if (name === 'title') {
+            props.userInput(prevNote => {
+                return({
+                    title: value,
+                    content: prevNote.content
+                });
+            });
+        } else if (name === 'content') {
+            props.userInput(prevNote => {
+                return({
+                    title: prevNote.title,
+                    content: value
+                });
+            });
+        }
+    
+        /* console.log(props.singleNote); */
     }
     
     return( 

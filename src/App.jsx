@@ -11,7 +11,8 @@ function App() {
 
     //note should only have 1 property which is the user input, we're going to call it text
     const[note, setNote] = React.useState({
-        text: ''
+        title: '',
+        content: ''
     }); //setting note to be an object with an empty string property called text
 
     function createNote() { //now with createNote we want to add an empty note into the notes array
@@ -33,7 +34,7 @@ function App() {
             <Header addNote={createNote}/>
             <div className='row'>
                 {notes.map((e,i) => {
-                    return <Note key={i} id={i} clickX={deleteNote} userInput={setNote}/>
+                    return <Note key={i} id={i} clickX={deleteNote} userInput={setNote} singleNote={note}/>
                 })}
             </div>
             <Footer/> 
