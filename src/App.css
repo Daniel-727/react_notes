@@ -1,6 +1,7 @@
 * {
     padding:0;
     margin:0;
+    box-sizing: border-box;
 }
 
 .header {
@@ -28,10 +29,17 @@
     width: 240px;
     margin: 16px;
     float: left;
+    position:relative;
     }
 
 input{
     width:100%;
+}
+
+.x-mark{
+    position:absolute;
+    top: 5px;
+    right: 10px;
 }
 
 

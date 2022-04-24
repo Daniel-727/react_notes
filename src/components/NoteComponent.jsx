@@ -28,7 +28,7 @@ function Note(props){
                      <h1>{props.title}</h1>
                      <p>{props.content}</p>
                 </div>
-                {hover ? <div onClick={handleClick} className='xMark'><FontAwesomeIcon icon={faXmark} /></div> : <div></div>}
+                {hover ? <div onClick={handleClick} className='x-mark'><FontAwesomeIcon icon={faXmark} /></div> : <div></div>}
             </div>
         </div> 
     );
