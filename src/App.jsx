@@ -23,15 +23,19 @@ function App() {
     }
 
     function deleteNote(id) { 
-
+        setNotes(() => {
+            return notes.filter((e,i) => {
+                return(i !== id);
+            })
+        })
     }
     
     return (
         <>
-            <Header addNote={createNote}/>
+            <Header setNote={setNote} createNote={createNote}/>
             <div className='row'>
                 {notes.map((e,i) => {
-                    return <Note key={i} id={i} clickX={deleteNote} userInput={setNote} singleNote={note}/>
+                    return <Note key={i} id={i} deleteNote={deleteNote} setNote={setNote} title={e.title} content={e.content}/>
                 })}
             </div>
             <Footer/> 

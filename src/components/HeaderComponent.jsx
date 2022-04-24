@@ -22,7 +22,7 @@ function Header(props) {
                     React Notes
                 </h1> {/* isn't this p-4 class from reactstrap? I haven't imported it so why is it working? -- I forgot, this doesn't need to be imported. They are classes in bootstrap that I just add to these html elements and they will be styled accordingly*/}
             </div>
-            <AddCardModal modalState={isOpen} createNote={props.addNote} toggleModal={toggleModal}/>
+            <AddCardModal createNote={props.createNote} setNote={props.setNote} modalState={isOpen} toggleModal={toggleModal}/>
         </div>
     )
 }

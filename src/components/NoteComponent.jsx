@@ -15,8 +15,7 @@ function Note(props){
     }
 
     function handleClick(){
-        /* console.log('hi'); */
-        props.clickX(props.id); // this is the deleteNote() function passed in from the App component
+        props.deleteNote(props.id);
     }
 
     
@@ -26,6 +25,8 @@ function Note(props){
             <div className='note' onMouseOver={revealX} onMouseLeave={hideX}> {/*when user is hovering mouse over the Note, then we want the x to be visible so the user can click on it and delete the note if they want. Otherwise, the x should be hidden*/}
                 <div className='col'>
                      {/*onChange event listener doesn't work with spans, but it works with inputs*/}
+                     <h1>{props.title}</h1>
+                     <p>{props.content}</p>
                 </div>
                 {hover ? <div onClick={handleClick} className='xMark'><FontAwesomeIcon icon={faXmark} /></div> : <div></div>}
             </div>
