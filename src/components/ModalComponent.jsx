@@ -38,7 +38,7 @@ function AddCardModal(props){
     return(
         <>
         <Modal isOpen={props.modalState} toggle={props.toggleModal}> {/* adding toggle in the Modal allows us to exit the modal by clicking outside of it*/}
-            <ModalHeader>Add a Card</ModalHeader>
+            <ModalHeader>Add a Note</ModalHeader>
             <ModalBody>
                 <label htmlFor='title'>Title:</label><input name='title' id='title' onChange={handleChange}></input>
                 <label htmlFor='content'>Content:</label><input name='content' id='content' onChange={handleChange}></input>
